@@ -1,0 +1,59 @@
+.product {
+  width: 370px;
+
+  margin: 50px auto 0;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  cursor: pointer;
+}
+
+.product-meta {
+  padding: 15px;
+}
+
+.product-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.product-actions .icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* OVERLAY */
+.wrapper {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+
+  background-color: rgba(49, 49, 187, 0.5);
+
+  transition: transform 250ms ease-in-out;
+}
+
+.product-actions {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.product:is(:hover, :focus) .overlay {
+  transform: translateY(0%);
+}
