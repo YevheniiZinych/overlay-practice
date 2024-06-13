@@ -66,3 +66,25 @@ a {
 }
 
 /* Underline on the current page */
+
+.nav-link {
+  position: relative;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  cursor: pointer;
+}
+
+.nav-link.active::before {
+  position: absolute;
+  content: " ";
+  display: block;
+
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: rgb(182, 25, 132);
+}
